@@ -51,7 +51,14 @@ export default {
 		Text: "Play subtle and obscure 1.d4 openings: the London System, Colle, or quieter main lines, such as the Catalan"
 	},
 	Provocatively: {
-		Text: "Play the English, Reti, openings like 1.b3"
+		Text: "Play the English, Reti, openings like 1.b3",
+		Courses: [
+			{
+				Image: "https://www.chessable.com/img/books/1444311678816321.png",
+				Title: "Lifetime Repertoires: Alonso's Catalan",
+				Url: "https://www.chessable.com/lifetime-repertoires-alonso-s-catalan/course/144431/",
+			},
+		]
 	},
 	ForADraw: {
 		Text: "Chess is not the game for you. Try Checkers!"
