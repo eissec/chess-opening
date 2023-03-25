@@ -5,18 +5,33 @@ import Question from "./Question";
 import { motion } from "framer-motion";
 
 function App() {
-  const [question, setQuestion] = useState(Questions.YouPlayAs);
+  const [questionPath, setQuestionPath] = useState([Questions.YouPlayAs]);
+
+  const moveToQuestion = (question) => {
+    setQuestionPath([...questionPath, question]);
+  };
+
+  const goBack = () => {
+    setQuestionPath(questionPath.slice(0, questionPath.length - 1));
+  };
+
+  const lastQuestion = questionPath[questionPath.length - 1];
 
   return (
     <div className="App">
+      {questionPath.length > 1 && (
+        <button className={"back-button"} onClick={goBack}>
+          Back
+        </button>
+      )}
       <motion.div
-        key={question.Text}
+        key={lastQuestion.Text}
         animate={{
           scale: [0.2, 1],
           opacity: ["0%", "100%"],
         }}
       >
-        <Question question={question} setQuestion={setQuestion} />
+        <Question question={lastQuestion} setQuestion={moveToQuestion} />
       </motion.div>
     </div>
   );
