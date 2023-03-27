@@ -10,19 +10,21 @@ code {
     monospace;
 }
 
-a.course-recommendation {
-	display: inline-block;
-	background-size: contain;
-	width: 200px;
-	height: 200px;
-	position: relative;
+.course-rec {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
 }
 
-a.course-recommendation span {
-	position: absolute;
-	bottom: 0;
-	background: rgba(0,0,0,0.5);
-	left: 0;
-	width: 100%;
-	color: #fff;
+.courseImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.course-rec span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
 }

@@ -19,11 +19,6 @@ function App() {
 
   return (
     <div className="App">
-      {questionPath.length > 1 && (
-        <button className={"back-button"} onClick={goBack}>
-          Back
-        </button>
-      )}
       <motion.div
         key={lastQuestion.Text}
         animate={{
@@ -33,6 +28,11 @@ function App() {
       >
         <Question question={lastQuestion} setQuestion={moveToQuestion} />
       </motion.div>
+      {questionPath.length > 1 && (
+        <button className={"back-button"} onClick={goBack}>
+          Back
+        </button>
+      )}
     </div>
   );
 }
